@@ -1,9 +1,12 @@
 import React from 'react'
 
 function EventsFunctional() {
+  function clickHandler() {
+    console.log('clicked the functional button');
+  }
   return (
     <div>
-        <button>click me - functional component</button>
+        <button onClick={clickHandler}>click me - functional component</button>
     </div>
   )
 }
