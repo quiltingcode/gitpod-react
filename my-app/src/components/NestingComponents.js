@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserMessage from './UserMessage'
+import UserData from './UserData'
 
 export class NestingComponents extends Component {
 
@@ -7,7 +8,7 @@ export class NestingComponents extends Component {
     super(props)
   
     this.state = {
-       isLoaded: true,
+       isLoaded: false,
        isLoggedIn: false
     }
   }
@@ -15,7 +16,7 @@ export class NestingComponents extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.isLoaded ? 'Data Loaded!' : 'Loading...'}</h1>
+        <UserData isLoaded={this.state.isLoaded}/>
         <UserMessage isLoggedIn={this.state.isLoggedIn}/>
       </div>
     )
