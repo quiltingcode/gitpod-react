@@ -1,4 +1,5 @@
 import React from 'react'
+import Book from './Book'
 
 function RenderingLists() {
     const bookList = [
@@ -34,9 +35,10 @@ function RenderingLists() {
             books.map(book => {
                 return (
                     <div>
-                        <h5>{book.title}</h5>
-                        <p>{book.author}</p>
-                        <p>{book.pages}</p>
+                        <Book
+                        bookTitle={book.title}
+                        bookAuthor={book.author}
+                        bookPages={book.pages}/>
                     </div>
                 )
                 
