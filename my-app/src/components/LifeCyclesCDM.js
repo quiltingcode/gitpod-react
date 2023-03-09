@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import LifeCyclesCDMChild from './LifeCyclesCDMChild'
 
 export class LifeCyclesCDM extends Component {
 
     constructor(props) {
+        console.log('constructor called')
       super(props)
     
       this.state = {
@@ -11,7 +13,9 @@ export class LifeCyclesCDM extends Component {
     }
 
     getData() {
+        console.log('get data method called')
         setTimeout(() => {
+            console.log('data fetched')
             this.setState({
                 data: 'loaded'
             })
@@ -19,13 +23,16 @@ export class LifeCyclesCDM extends Component {
     }
 
     componentDidMount() {
+        console.log('component mounted')
         this.getData()
     }
 
   render() {
+    console.log('render method called')
     return (
       <div>
         <h1>{this.state.data}</h1>
+        <LifeCyclesCDMChild />
       </div>
     )
   }
