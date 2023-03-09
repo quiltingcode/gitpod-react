@@ -36,9 +36,7 @@ function RenderingLists() {
                 return (
                     <div>
                         <Book
-                        bookTitle={book.title}
-                        bookAuthor={book.author}
-                        bookPages={book.pages}/>
+                        book={book}/>
                     </div>
                 )
                 
