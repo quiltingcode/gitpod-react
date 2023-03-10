@@ -10,13 +10,20 @@ export class ControlledForm extends Component {
       }
     }
 
+    handleNameChange = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
   render() {
     return (
       <div>
         <form>
             <label htmlFor="id-name">Your Name: </label>
             <input 
-                defaultValue={this.state.name}
+                value={this.state.name}
+                onChange={this.handleNameChange}
                 id="id-name"
                 name="name"
                 type="text" 
