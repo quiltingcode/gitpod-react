@@ -10,14 +10,14 @@ function UseStateWithObjects() {
                     type="text"
                     value={name.firstName}
                     onChange={e => setName({
-                        firstName: e.target.value
+                        ...name, firstName: e.target.value
                     })}
                 />
                 <input
                     type="text"
                     value={name.lastName}
                     onChange={e => setName({
-                        lastName: e.target.value
+                        ...name, lastName: e.target.value
                     })}
                 />
                 <h2>{JSON.stringify(name)}</h2>
